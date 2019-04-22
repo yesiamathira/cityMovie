@@ -1,0 +1,12 @@
+<div>
+    <input type="text" placeholder="movie name" name="name" [(ngModel)]="movie.name"><br>
+    <input type="number" placeholder="year" name="year" [(ngModel)]="movie.year"><br>
+    <input type="text" placeholder="image_url" name="image_url" [(ngModel)]="movie.image_url"><br>
+    <input type="text" placeholder="production_house" name="production_house" [(ngModel)]="movie.production_house"><br>
+    <input type="text" placeholder="rating" name="rating" [(ngModel)]="movie.rating"><br>
+    <input type="text" placeholder="type" name="type" [(ngModel)]="movie.type"><br>
+    <input type="text" placeholder="language" name="language"[(ngModel)]="movie.language"><br>
+    <input type="date" placeholder="date" name="date" [(ngModel)]="movie.date"><br>
+  <input type="button" value="add movies" name="addmovies" (click)="addMovie(movie)"><hr>
+  
+</div>

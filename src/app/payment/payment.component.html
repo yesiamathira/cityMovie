@@ -1,0 +1,58 @@
+<!-- <p>
+ Sub Total:Rs{{priceBooking}}
+
+ </p> -->
+ <ion-header>
+    <ion-toolbar>
+      <ion-icon name="arrow-round-back" color="primary" style="font-size:40px;float: left;left: 0;margin:0"
+      (click)="move()">
+    </ion-icon>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+<ion-card>
+  <div class="heading">
+    <h1 class='one'>Make payment</h1>
+</div>
+  <ion-item>
+    <ion-label>Choose your payment option</ion-label>
+    <ion-select multiple="true" cancelText="Nah" okText="Okay!">
+      <ion-select-option value="ICICI " > ICICI</ion-select-option>
+      <ion-select-option value="SBI" >SBI</ion-select-option>
+      <ion-select-option value="HDFC" >HDFC</ion-select-option>
+      
+     
+    </ion-select>
+  
+  
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder=" Enter CVV" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder=" Enter Card Number" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Select card expiration date</ion-label>
+    <ion-select multiple="true" cancelText="Nah" okText="Okay!">
+      <ion-select-option value="01" >January </ion-select-option>
+      <ion-select-option value="02" > February</ion-select-option>
+      <ion-select-option value="03" >March</ion-select-option>
+      <ion-select-option value="04" >April</ion-select-option>
+      <ion-select-option value="05" >May</ion-select-option>
+      <ion-select-option value="06" >June</ion-select-option>
+      <ion-select-option value="07" >July</ion-select-option>
+      <ion-select-option value="08" >August</ion-select-option>
+      <ion-select-option value="09" >September</ion-select-option>
+      <ion-select-option value="10" >October</ion-select-option>
+      <ion-select-option value="11" >November</ion-select-option>
+      <ion-select-option value="12" >December</ion-select-option>
+    </ion-select>
+  
+  
+  </ion-item>
+  <!-- <ion-button color='danger' type='button' (click)='submit()'>Click to pay</ion-button> -->
+ <ion-button type="submit" color="danger" routerLink="/paymentdone" (click)='submit()'> Pay:Rs.{{priceBooking}}</ion-button>
+</ion-card>
+</ion-content>
+
