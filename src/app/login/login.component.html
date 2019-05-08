@@ -1,36 +1,106 @@
 
 
-<ion-content>
-<ion-card>
+
+
+<!-- <!-- <ion-content>
+  <ion-card>
+      
+    <ion-card-header>
+       LOGIN 
+    </ion-card-header>
+    <ion-card-content>
+  <ion-list no-lines>
+  <ion-item>
+  
+  <ion-label floating><ion-icon name="person"></ion-icon></ion-label>
+  <ion-input type="text" placeholder="Username" [(ngModel)]="customer.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="key"></ion-icon>
+  <ion-input type="password" placeholder="Password" [(ngModel)]="customer.password"></ion-input>
+  </ion-item>
+  <ion-item><p><a routerLink="/forget">Forgot Your Password?</a>&nbsp;<a routerLink="/register">New User?</a>
+  </p></ion-item>
+  
+  
+  
+  <ion-button class="face" color="primary" expand="block" (click)="doLogin(customer)">LOGIN</ion-button>
+  <ion-label>{{message}}</ion-label>
+   </ion-list>
+  
+    </ion-card-content>
+    <p>OR</p><br><br>
+  <ion-button class="face" color="primary" expand="block" ><ion-icon name="logo-facebook"></ion-icon></ion-button>
+  <ion-button class="face" color="primary"expand="block" ><ion-icon name="logo-googleplus"></ion-icon></ion-button>
+  
+  </ion-card>
+  
+  
+  </ion-content> 
+ -->
+
+
+
+  <!-- <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Login Page
+      </ion-title> -->
+    <!-- </ion-toolbar>
+  </ion-header>
+   --> 
+  
+   <ion-content  padding> 
     
-  <ion-card-header>
-     LOGIN 
-  </ion-card-header>
-  <ion-card-content>
-<ion-list no-lines>
-<ion-item>
-
-<ion-label floating><ion-icon name="person"></ion-icon></ion-label>
-<ion-input type="text" placeholder="Username" [(ngModel)]="customer.email"></ion-input>
-</ion-item>
-<ion-item>
-  <ion-icon name="key"></ion-icon>
-<ion-input type="password" placeholder="Password" [(ngModel)]="customer.password"></ion-input>
-</ion-item>
-<ion-item><p><a routerLink="/forget">Forgot Your Password?</a>&nbsp;<a routerLink="/register">New User?</a>
-</p></ion-item>
-
-<!-- <button ion-button color="primary">Login</button> -->
-
-<ion-button class="face" color="primary" expand="block" (click)="doLogin(customer)">LOGIN</ion-button>
-</ion-list>
-
-  </ion-card-content>
-  <p>OR</p><br><br>
-<ion-button class="face" color="primary" expand="block"><ion-icon name="logo-facebook"></ion-icon></ion-button>
-<ion-button class="face" color="primary"expand="block"><ion-icon name="logo-googleplus"></ion-icon></ion-button>
-
-</ion-card>
-
-
-</ion-content>
+    
+    
+    
+    <form >
+      <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div text-center>
+              <h3 class="b">LOGIN HERE</h3>
+            </div>
+            <div padding>
+              <ion-card>
+              <ion-item>
+                <ion-input type="text" placeholder="Username" name="username" [(ngModel)]="customer.email"><ion-icon name="person"></ion-icon></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="customer.password" ><ion-icon name="unlock"></ion-icon></ion-input>
+              </ion-item>
+              <br><br>
+              
+              </ion-card>
+              <div>Forgot password? Click<a routerLink='/forget'>
+                here</a> </div>
+            </div>
+            <div padding>
+              <ion-button size="large" type="submit" expand="block" (click)="doLogin(customer)">LOGIN </ion-button>
+              <ion-label>{{message}}</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <div text-center>
+        If you don't have an account, please <a routerLink='/register'>
+          register</a> first!
+          </div>
+      
+          
+           <div class="five">
+          <ion-button color="tertiary" size="large"><ion-icon name="logo-facebook"></ion-icon></ion-button>
+          <ion-button color="secondary" size="large"><ion-icon name="logo-twitter"></ion-icon></ion-button>
+        </div>
+        </ion-row>
+        
+        
+        
+     
+      </ion-grid>
+    </form>
+  </ion-content>  

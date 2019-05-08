@@ -1,7 +1,7 @@
 .one{
     margin-left: 10px;
     margin-top: 10px;
-    color: whitesmoke;
+    color: #ff4f38c0;
 }
 
 .three{
@@ -12,8 +12,18 @@
    
 }
 ion-card {
-    background-color:#ff4f38;
+    --background: url('/assets/back1.png');
 }
 .four{
-    color: antiquewhite;
+    color: #ff4f38c0;
+}
+ion-toolbar{
+    --background: url('/assets/back1.png');
+    font-size: 30px;
+    color:#ff4f38c0;
+    font-style: italic;
+    text-align: center;
+}
+ion-content{
+    --background: url('/assets/back1.png');
 }

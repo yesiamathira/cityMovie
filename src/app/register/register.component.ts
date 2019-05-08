@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import  CustomerService  from '../customer.service';
 import { Router } from '@angular/router';
+import {Location} from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -23,7 +25,7 @@ customers: any = [
 ]
 
 list=[];
-  constructor(private customerService: CustomerService,private router :Router) {
+  constructor(private customerService: CustomerService,private router :Router,private _location: Location,private route: ActivatedRoute) {
     this.customerService.getDBCustomers();
     this.customerService.getRemoteCustomers().subscribe((result)=>{this.list=result;});
    }
@@ -34,8 +36,9 @@ list=[];
     }
 
 
-    
-
+    move(){
+      this._location.back();
+    }
 
 
 

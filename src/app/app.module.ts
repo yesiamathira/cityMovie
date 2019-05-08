@@ -15,6 +15,7 @@ import {OfferComponent} from './offer/offer.component';
 import {PaymentComponent} from './payment/payment.component';
 import {BookingComponent} from './booking/booking.component';
 import {AddmovieComponent} from './addmovie/Addmovie.component';
+import { ViewbookingComponent} from './viewbooking/viewbooking.component';
 import { TrailerComponent} from './trailer/trailer.component';
 import { Camera } from '@ionic-native/camera/ngx';
 import { PaymentdoneComponent} from './paymentdone/paymentdone.component';
@@ -22,7 +23,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [AppComponent,AddmovieComponent,LoginComponent,MoviesComponent,TrailerComponent,RegisterComponent,ForgetComponent,BookingComponent,PaymentComponent,OfferComponent,PaymentdoneComponent],
+  declarations: [AppComponent,AddmovieComponent,LoginComponent,ViewbookingComponent,MoviesComponent,TrailerComponent,RegisterComponent,ForgetComponent,BookingComponent,PaymentComponent,OfferComponent,PaymentdoneComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,FormsModule],
   providers: [

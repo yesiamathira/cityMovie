@@ -4,7 +4,7 @@ ion-card{
   margin:80px 50px;
   padding:50px;
   font-size:23px;
-  --background:rgba(255, 0, 0, 0.534);
+  --background: url('/assets/back1.png');
   color:white;
    
 }
@@ -14,5 +14,14 @@ ion-button{
     margin-left: 120px;
 }
 ion-content{
-  --background:#ff4f38;
+  --background: url('/assets/back1.png');
+}
+
+ion-toolbar{
+   
+  --background: url('/assets/back1.png');
+  font-size: 30px;
+  color:#ff4f38c0;
+  font-style: italic;
+  text-align: center;
 }

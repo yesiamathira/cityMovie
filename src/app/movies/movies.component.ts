@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import CustomerService   from '../customer.service';
 import { Router, NavigationEnd  } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import {Location} from '@angular/common';
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
@@ -15,7 +17,7 @@ export class MoviesComponent implements OnInit {
     address:"",
 };
 list=[];
-  constructor(private customerService: CustomerService,private router :Router) { }
+  constructor(private customerService: CustomerService,private router :Router,private route: ActivatedRoute,private _location: Location) { }
 
   ngOnInit() {
     this.customerService.getDBMovies();
@@ -35,5 +37,7 @@ deleteMovie(movie){
   this.customerService.deleteRemoteMovie(movie).subscribe((e)=>{this.customerService.getRemoteMovies().subscribe((result)=>{this.list=result;});});
 }
 
-
+move(){
+  this._location.back();
+}
 }

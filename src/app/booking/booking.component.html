@@ -18,6 +18,14 @@
  
 </ion-card>
 </ion-content> -->
+<ion-header>
+    <ion-toolbar>
+      <ion-icon name="arrow-round-back" color="primary" style="font-size:40px;float: left;left: 0;margin:0"
+      (click)="move()">
+    </ion-icon>
+    Book a movie
+  </ion-toolbar>
+  </ion-header>
 
 <ion-content>
   <ion-card>
@@ -53,7 +61,7 @@ Movie-date:<span class='four'>{{movie.date}}</span><br>
 <ion-item><ion-input type="number" placeholder="ticket price" [(ngModel)]="booking.ticket_price"></ion-input></ion-item><br>
 <!-- <ion-item><ion-input type="number" placeholder="amount" [(ngModel)]="booking.amount"></ion-input></ion-item><br> -->
 </ion-card>
-<ion-button color="danger"expand="block" (click)="addBookings(booking)"  name="booking">Book</ion-button>
+<ion-button expand="block" (click)="addBookings(booking)"  name="booking">Book</ion-button>
 
 <!-- <ion-item>
   <ion-label>Choose your payment option</ion-label>

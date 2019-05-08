@@ -1,28 +1,33 @@
 
 ion-content{
-    --background: navy;
+    // --background: navy;
     --background-size: cover;
     --background-position: center;
     --background-repeat: no-repeat;
+    --background: url('/assets/back1.png');
 }
 
 // ion-img{
 // margin-top: 200px;
 // }
 ion-toolbar{
-    --background:red;  
-} 
+    --background: url('/assets/back1.png');
+}
+
 ion-card{
     --background:white;
 }
 .a{
     width:30%;
 }
+.b{
+    width:90%; 
+}
 .image h1{
     color:white;
 }
 ion-toolbar{
-    --background:red;
+     --background: url('/assets/back1.png');
     color:white;  
 }
 ion-footer{

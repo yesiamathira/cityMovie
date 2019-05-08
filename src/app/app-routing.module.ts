@@ -10,6 +10,7 @@ import {BookingComponent} from './booking/booking.component';
 import {AddmovieComponent} from './addmovie/Addmovie.component';
 import { TrailerComponent} from './trailer/trailer.component';
 import { PaymentdoneComponent} from './paymentdone/paymentdone.component';
+import { ViewbookingComponent} from './viewbooking/viewbooking.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {path:'login',component:LoginComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:'addmovie',component:AddmovieComponent},
   {path:'trailer',component:TrailerComponent},
   {path:'paymentdone',component:PaymentdoneComponent},
+  {path:'viewbooking',component:ViewbookingComponent},
  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
 ];
 

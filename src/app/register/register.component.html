@@ -1,18 +1,102 @@
 
+<!-- <ion-header>
+    <ion-toolbar>
+      <ion-icon name="arrow-round-back" color="primary" style="font-size:40px;float: left;left: 0;margin:0"
+      (click)="move()">
+    </ion-icon>
+    </ion-toolbar>
+  </ion-header>
+
 <ion-content>
-  <ion-card>
+<ion-card>
     <ion-card-header>REGISTER </ion-card-header>
-    <!-- <input type="text" placeholder="id" [(ngModel)]="customer.id" readonly> -->
-    <input type="text" placeholder="name" [(ngModel)]="customer.name"><br>
-    <input type="password" placeholder="password" [(ngModel)]="customer.password"><br>
-    <input type="text" placeholder="address" [(ngModel)]="customer.address"><br>
-    <input type="text" placeholder="email" [(ngModel)]="customer.email"><br>
-    <input type="text" placeholder="phone" [(ngModel)]="customer.phone"><br>
-<input type="button"  value="Register" (click)="addCustomer(customer)">
+    <ion-item>
+        <ion-label position="floating">Enter Name </ion-label>
+        <ion-input [(ngModel)]="customer.name"></ion-input>
+      </ion-item><br><br>
+      
+      <ion-item>
+          <ion-label position="floating"> Enter Password </ion-label>
+          <ion-input [(ngModel)]="customer.password"></ion-input>
+        </ion-item><br><br>
+        
+        <ion-item>
+            <ion-label position="floating">Enter Address </ion-label>
+            <ion-input [(ngModel)]="customer.address"></ion-input>
+          </ion-item><br><br>
+
+          <ion-item>
+              <ion-label position="floating">Enter Email </ion-label>
+              <ion-input [(ngModel)]="customer.email"></ion-input>
+            </ion-item><br><br>
+            
+            <ion-item>
+                <ion-label position="floating">Enter Phone </ion-label>
+                <ion-input [(ngModel)]="customer.phone"></ion-input>
+              </ion-item><br><br>
+              <ion-button class="face" color="primary" expand="block" (click)="addCustomer(customer)"  routerLink="/login">REGISTER</ion-button>
+</ion-card>
+</ion-content> -->
+
+<ion-header>
+    <ion-toolbar>
+      <ion-icon name="arrow-round-back" color="primary" style="font-size:40px;float: left;left: 0;margin:0"
+      (click)="move()">
+    </ion-icon>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+<ion-card>
+    <ion-card-header>REGISTER </ion-card-header>
+    <ion-item>
+        <ion-label position="floating">Enter Name </ion-label>
+        <ion-input [(ngModel)]="customer.name"></ion-input>
+      </ion-item><br><br>
+      
+      <ion-item>
+          <ion-label position="floating"> Enter Password </ion-label>
+          <ion-input [(ngModel)]="customer.password"></ion-input>
+        </ion-item><br><br>
+        
+        <ion-item>
+            <ion-label position="floating">Enter Address </ion-label>
+            <ion-input [(ngModel)]="customer.address"></ion-input>
+          </ion-item><br><br>
+
+          <ion-item>
+              <ion-label position="floating">Enter Email </ion-label>
+              <ion-input [(ngModel)]="customer.email"></ion-input>
+            </ion-item><br><br>
+            
+            <ion-item>
+                <ion-label position="floating">Enter Phone </ion-label>
+                <ion-input [(ngModel)]="customer.phone"></ion-input>
+              </ion-item><br><br>
+              
+              <ion-item>
+                <ion-label>Security question </ion-label>
+                <ion-select name="security_question" placeholder="choose security question" [(ngModel)]="customer.security_question">
+                  <ion-select-option value="favourite color" > Name of your favourite color? </ion-select-option>
+                  <ion-select-option value="pet name" > Your pet name?</ion-select-option>
+                  <ion-select-option value="first teacher" >Name of your first teacher?</ion-select-option>
+            </ion-select>
+              </ion-item><br><br>
+              
+             
+              
+               <ion-item>
+                <ion-label>Enter answer</ion-label>
+                <ion-input type="text" name="answer" [(ngModel)]="customer.answer"></ion-input>
+              </ion-item><br><br>
+              
+              
+              <ion-button class="face"  expand="block" (click)="addCustomer(customer)"  routerLink="/login">REGISTER</ion-button>
+
+
+
+
+
 
 </ion-card>
-  <!-- <div *ngFor='let customer of list'>
-    {{customer.name}}|{{customer.password}}
-  </div> -->
-
 </ion-content>

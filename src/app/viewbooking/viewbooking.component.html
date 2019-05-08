@@ -1,0 +1,20 @@
+<p>
+  viewbooking works!
+</p>
+
+
+<div class="list" >
+
+    <div *ngFor="let booking of list"> 
+          
+        <ion-card>  <h4 class='five'>Name:{{booking.movie_name}}</h4><br>
+        
+    
+      <span class='four'>Time:{{booking.movie_time}}</span><br>
+      <span class='four'>Date:{{booking.movie_date}}</span><br>
+      <span class='four'> Theatre:{{booking.theatre}}</span><br>
+      <span class='four'> City:{{booking.city}}</span><br>
+      <!-- <span><input type="button" name="edit" value="book" (click)="onSelect(movie)"></span> -->
+  
+  </ion-card>
+  </div>

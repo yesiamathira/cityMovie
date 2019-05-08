@@ -58,7 +58,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import  CustomerService   from '../customer.service';
 import { ActivatedRoute } from '@angular/router';
-
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-booking',
@@ -75,7 +75,7 @@ numbers :number ;
 
 id:number;
 private sub: any;
-  constructor(private route: ActivatedRoute,private router :Router, private customerService:CustomerService) {  
+  constructor(private route: ActivatedRoute,private router :Router, private customerService:CustomerService,private _location: Location) {  
         this.booking={customer_id:this.customerId.id,tickets:0,movie_id:this.movieL.id,movie_name:this.movieL.name,movie_time:'',theatre:'Vox Cinemas',screen:'Screen 3',city:'Bangalore',movie_date:'',date:'',amount:0,ticket_price:200}
         // this.booking={customer_id:'customerId.id',tickets:'',movie_id:'this.movie.id',movie_name:'this.movie.name',movie_time:'',theatre:'',screen:'',city:'',movie_date:'',date:'',amount:'',ticket_price:''};
   }
@@ -100,6 +100,8 @@ private sub: any;
 
     });
   }
-
+  move(){
+    this._location.back();
+  }
 }
 
